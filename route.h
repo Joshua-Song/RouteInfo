@@ -269,7 +269,7 @@ struct rt_addrinfo {
  *
  *	@return 路由器IP地址
  */
-static inline NSString *wb_getRouteIPString()
+static inline NSString *zj_getRouteIPString()
 {
     int mib[] = {CTL_NET, PF_ROUTE, 0, AF_INET,
         NET_RT_FLAGS, RTF_GATEWAY};
@@ -363,7 +363,7 @@ struct sockaddr_inarp {
  *
  *	@return 该ip设备 mac地址
  */
-static inline NSString *wb_getMacAddressWithIpString(NSString *ipString)
+static inline NSString *zj_getMacAddressWithIPString(NSString *ipString)
 {
     in_addr_t addr = inet_addr(ipString.UTF8String);
     NSString *str = nil;
